@@ -8,14 +8,23 @@ const form = document.querySelector("#add-cafe-form");
      let li = document.createElement('li');
      let name = document.createElement('span');
      let city = document.createElement('span');
+     let cross = document.createElement('div');
 
      li.setAttribute('data-id', element.id);
      name.textContent = element.data().name;
      city.textContent = element.data().city;
+     cross.textContent = "x";
 
      li.appendChild(name);
      li.appendChild(city);
      cafeList.appendChild(li);
+     li.appendChild(cross);
+
+     //delete data
+     cross.addEventListener('click', (e) => {
+         let id = e.target.parentElement.getAttribute('data-id');
+         db.collection('cafe').doc(id).delete();
+     })
  };  
 
  //getting data
