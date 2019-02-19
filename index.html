@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Cloud Cafe</h1>
+
+    <div class="content">
+
+        <form id="add-cafe-form">
+            <input type="text" name="name" placeholder="name">
+            <input type="text" name="city" placeholder="city">
+            <button>submit</button>
+        </form>
+
+        <ul id="cafe-list"></ul>
+
+    </div>
+
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAGhQhMRTrY33qADNhU8RP2obrJhUJfWew",
+            authDomain: "fir-database-3191f.firebaseapp.com",
+            databaseURL: "https://fir-database-3191f.firebaseio.com",
+            projectId: "fir-database-3191f",
+            storageBucket: "fir-database-3191f.appspot.com",
+            messagingSenderId: "116732264672"
+        };
+        firebase.initializeApp(config);
+        const db = firebase.firestore();
+    </script>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
+<!-- <html>
+
+<head>
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-firestore.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Cloud Cafe</h1>
+
+    <div class="content">
+
+        <form id="add-cafe-form"></form>
+
+        <ul id="cafe-list"></ul>
+
+    </div>
+
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAGhQhMRTrY33qADNhU8RP2obrJhUJfWew",
+            authDomain: "fir-database-3191f.firebaseapp.com",
+            databaseURL: "https://fir-database-3191f.firebaseio.com",
+            projectId: "fir-database-3191f",
+            storageBucket: "fir-database-3191f.appspot.com",
+            messagingSenderId: "116732264672"
+        };
+        firebase.initializeApp(config);
+        const db = firebase.firestore();
+    </script>
+
+    <script src="app.js"></script>
+</body>
+
+</html> -->
