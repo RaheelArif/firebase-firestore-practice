@@ -28,7 +28,7 @@ const form = document.querySelector("#add-cafe-form");
  };  
 
  //getting data
-db.collection('cafe').get().then((snapshot) => {
+db.collection('cafe').orderBy('name').get().then((snapshot) => {
 
     snapshot.docs.forEach(element => {
         renderCafe(element)
